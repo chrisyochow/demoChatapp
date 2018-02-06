@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31F22CB298D20F8CA5E6134E /* Pods_DemoChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C5D0EDD83B2C9ED90E57CF /* Pods_DemoChatApp.framework */; };
 		BE7073C72029734A00FCDE07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7073C62029734A00FCDE07 /* AppDelegate.swift */; };
 		BE7073C92029734A00FCDE07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7073C82029734A00FCDE07 /* ViewController.swift */; };
 		BE7073CC2029734A00FCDE07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7073CA2029734A00FCDE07 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B6D0D2A64C1FFDBB4EB7E57 /* Pods-DemoChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoChatApp/Pods-DemoChatApp.release.xcconfig"; sourceTree = "<group>"; };
+		B3C5D0EDD83B2C9ED90E57CF /* Pods_DemoChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7073C32029734A00FCDE07 /* DemoChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7073C62029734A00FCDE07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE7073C82029734A00FCDE07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		BE7073CD2029734A00FCDE07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE7073D02029734A00FCDE07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE7073D22029734A00FCDE07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E24121BC0AF95C8DF9F6E320 /* Pods-DemoChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoChatApp/Pods-DemoChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31F22CB298D20F8CA5E6134E /* Pods_DemoChatApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F5CFCBF9000448DFF7679F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3C5D0EDD83B2C9ED90E57CF /* Pods_DemoChatApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BE7073BA2029734A00FCDE07 = {
 			isa = PBXGroup;
 			children = (
 				BE7073C52029734A00FCDE07 /* DemoChatApp */,
 				BE7073C42029734A00FCDE07 /* Products */,
+				C1B5655289995F7069AB46EF /* Pods */,
+				9F5CFCBF9000448DFF7679F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = DemoChatApp;
 			sourceTree = "<group>";
 		};
+		C1B5655289995F7069AB46EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E24121BC0AF95C8DF9F6E320 /* Pods-DemoChatApp.debug.xcconfig */,
+				3B6D0D2A64C1FFDBB4EB7E57 /* Pods-DemoChatApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE7073D52029734A00FCDE07 /* Build configuration list for PBXNativeTarget "DemoChatApp" */;
 			buildPhases = (
+				17D82232AB0083C8C62D0D4A /* [CP] Check Pods Manifest.lock */,
 				BE7073BF2029734A00FCDE07 /* Sources */,
 				BE7073C02029734A00FCDE07 /* Frameworks */,
 				BE7073C12029734A00FCDE07 /* Resources */,
+				0ABBB2CEFD78CC5CE053F324 /* [CP] Embed Pods Frameworks */,
+				928828F7FE918488B6692603 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0ABBB2CEFD78CC5CE053F324 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DemoChatApp/Pods-DemoChatApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoChatApp/Pods-DemoChatApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17D82232AB0083C8C62D0D4A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DemoChatApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		928828F7FE918488B6692603 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoChatApp/Pods-DemoChatApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BE7073BF2029734A00FCDE07 /* Sources */ = {
@@ -272,6 +357,7 @@
 		};
 		BE7073D62029734A00FCDE07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E24121BC0AF95C8DF9F6E320 /* Pods-DemoChatApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +373,7 @@
 		};
 		BE7073D72029734A00FCDE07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B6D0D2A64C1FFDBB4EB7E57 /* Pods-DemoChatApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
