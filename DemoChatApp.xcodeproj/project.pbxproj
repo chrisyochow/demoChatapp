@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31F22CB298D20F8CA5E6134E /* Pods_DemoChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3C5D0EDD83B2C9ED90E57CF /* Pods_DemoChatApp.framework */; };
+		BE5D29C420297F4E00225D59 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE5D29C320297F4E00225D59 /* SWRevealViewController.m */; };
 		BE7073C72029734A00FCDE07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7073C62029734A00FCDE07 /* AppDelegate.swift */; };
 		BE7073C92029734A00FCDE07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7073C82029734A00FCDE07 /* ViewController.swift */; };
 		BE7073CC2029734A00FCDE07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE7073CA2029734A00FCDE07 /* Main.storyboard */; };
@@ -18,6 +19,9 @@
 /* Begin PBXFileReference section */
 		3B6D0D2A64C1FFDBB4EB7E57 /* Pods-DemoChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoChatApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoChatApp/Pods-DemoChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		B3C5D0EDD83B2C9ED90E57CF /* Pods_DemoChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5D29C120297F4C00225D59 /* DemoChatApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoChatApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		BE5D29C220297F4E00225D59 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		BE5D29C320297F4E00225D59 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		BE7073C32029734A00FCDE07 /* DemoChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7073C62029734A00FCDE07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE7073C82029734A00FCDE07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,9 +52,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BE5D29C020297F2F00225D59 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE5D29C220297F4E00225D59 /* SWRevealViewController.h */,
+				BE5D29C320297F4E00225D59 /* SWRevealViewController.m */,
+				BE5D29C120297F4C00225D59 /* DemoChatApp-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		BE7073BA2029734A00FCDE07 = {
 			isa = PBXGroup;
 			children = (
+				BE5D29C020297F2F00225D59 /* Supporting Files */,
 				BE7073C52029734A00FCDE07 /* DemoChatApp */,
 				BE7073C42029734A00FCDE07 /* Products */,
 				C1B5655289995F7069AB46EF /* Pods */,
@@ -123,6 +138,7 @@
 				TargetAttributes = {
 					BE7073C22029734A00FCDE07 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -223,6 +239,7 @@
 			files = (
 				BE7073C92029734A00FCDE07 /* ViewController.swift in Sources */,
 				BE7073C72029734A00FCDE07 /* AppDelegate.swift in Sources */,
+				BE5D29C420297F4E00225D59 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,12 +377,15 @@
 			baseConfigurationReference = E24121BC0AF95C8DF9F6E320 /* Pods-DemoChatApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Y5P88P6T5;
 				INFOPLIST_FILE = DemoChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fcc-pro.DemoChatApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/DemoChatApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -376,12 +396,14 @@
 			baseConfigurationReference = 3B6D0D2A64C1FFDBB4EB7E57 /* Pods-DemoChatApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9Y5P88P6T5;
 				INFOPLIST_FILE = DemoChatApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fcc-pro.DemoChatApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/DemoChatApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
